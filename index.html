@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Weather</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="src/style.css">
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+  <header>
+         <form>
+           <label for="search-row">Choose a city</label>
+           <input type="text" autofocus name="search-row" size="50px
+                " id="search-form" >
+        <input type="submit" id="submit-button" value="Search"/>
+        <input type="submit" id="current-place" value="Current Location"
+
+        </form>
+    
+     </header>
+<ul class="ul-cities"> 
+    <li class="li-cities">Paris</li>
+    <li class="li-cities">London</li>
+    <li class="li-cities">Berlin</li>
+    <li class="li-cities">Toronto</li>
+    <li class="li-cities">Kyiv</li>
+</ul>
+<p>
+    <div class="row current-row">
+        <div class="col-3"> <ul >
+   <li class="ul-current-row"><h1>Kyiv</h1></li> 
+   <li class="ul-current-row">  <h2>Sunday</h2></li>
+   <li class="ul-current-row"><h3>15.05.2022 20:31</h3></li></ul></div>
+  <div class="col-3">
+      <ul class="ul-weather-parametr">
+          <li class="li-weather-parametr" id="humidity">Humidity: 70%</li>
+          <li class="li-weather-parametr" id="wind">Wind: 2km/h</li>
+      </ul>
+  </div>
+  <div class="col-3 current-emoji">⛅
+  </div>
+  <div class="col-3 current-weather"> <span class="weather-degree" id="temp">13</span><a href="#" id="celsius-degrees">°C</a>|<a href="#" id="fahrenheit-degrees">°F</a></div>  
+</div>
+</p>
+<footer>
+   <div class="row forecast-row">
+    <div class="col-2">
+    <ul>
+        <li>monday</li>
+        <li class="forecast-date">16.05.22</li>
+        <li class="forecast-emoji">⛅</li>
+        <li class="forecast-temperature">8<span class="forecast-degree">°C</span> </li>
+    </ul>
+    </div>
+    <div class="col-2">
+      <ul>
+        <li>tuesday</li>
+        <li class="forecast-date">17.05.06</li>
+        <li class="forecast-emoji">☀</li>
+        <li class="forecast-temperature">8<span class="forecast-degree">°C</span> </li>
+    </ul>
+    </div>
+    <div class="col-2">
+     <ul>
+        <li>wednesday</li>
+        <li class="forecast-date">18.05.22</li>
+        <li class="forecast-emoji">☀</li>
+        <li class="forecast-temperature">8<span class="forecast-degree">°C</span> </li>
+    </ul>
+    </div>
+    <div class="col-2">
+      <ul>
+        <li>thursday</li>
+        <li class="forecast-date">19.05.22</li>
+        <li class="forecast-emoji">⛅</li>
+        <li class="forecast-temperature">8<span class="forecast-degree">°C</span> </li>
+    </ul>
+    </div>
+    <div class="col-2">
+      <ul>
+        <li>friday</li>
+        <li class="forecast-date">20.05.22</li>
+        <li class="forecast-emoji">☔</li>
+        <li class="forecast-temperature">8<span class="forecast-degree">°C</span> </li>
+    </ul>
+    </div>
+    <div class="col-2">
+      <ul>
+        <li>saturday</li>
+        <li class="forecast-date">21.05.22</li>
+        <li class="forecast-emoji">☁</li>
+        <li class="forecast-temperature">8<span class="forecast-degree">°C</span> </li>
+    </ul>
+    </div> 
+  </div> 
+</footer>
+
+     
+   </div> 
+<script src="src/script.js">
+</script>
+</body>
+</html>

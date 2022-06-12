@@ -1,0 +1,83 @@
+body {
+  font-family: "Quicksand", sans-serif;
+}
+header {
+  padding-top: 25px;
+  padding-bottom: 10px;
+  width: 100%;
+  font-family: "Quicksand", sans-serif;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 15px;
+}
+h3 {
+  font-size: 11px;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+label {
+  font-size: 25px;
+}
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+}
+.city-row {
+  font-size: 13px;
+}
+.current-row {
+  margin-top: 30px;
+}
+.ul-current-row {
+  padding-bottom: 5px;
+}
+.ul-weather-parametr {
+  margin-top: 20px;
+}
+.li-weather-parametr {
+  font-size: 11px;
+  margin-left: 25px;
+}
+.current-emoji {
+  font-size: 80px;
+  margin-top: -20px;
+  text-align: center;
+}
+.weather-degree {
+  font-size: 70px;
+  margin-top: -15px;
+}
+.degree-c {
+  font-size: 25px;
+}
+.forecast-date {
+  font-size: 11px;
+}
+.forecast-emoji {
+  font-size: 30px;
+}
+.forecast-temperature {
+  font-size: 15px;
+}
+.forecast-degree {
+  font-size: 11px;
+}
+.ul-cities {
+  display: inline-flex;
+  font-size: 14px;
+}
+.li-cities {
+  padding: 7px;
+}
