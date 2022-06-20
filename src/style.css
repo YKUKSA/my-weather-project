@@ -87,3 +87,9 @@ footer {
 .li-cities {
   padding: 7px;
 }
+#celsius-degrees,
+#fahrenheit-degrees {
+  text-decoration: none;
+  color: black;
+  cursor: default;
+}
