@@ -36,6 +36,9 @@ ul {
 label {
   font-size: 25px;
 }
+li:first-letter {
+  text-transform: capitalize;
+}
 footer {
   margin-top: 30px;
   font-size: 14px;

@@ -52,6 +52,13 @@ function temperatureValue(response) {
   celsiusTemperature = response.data.main.temp;
   let tempInput = document.querySelector("#temp");
   tempInput.innerHTML = temperature;
+  let description = document.querySelector("#description");
+  description.innerHTML = response.data.weather[0].description;
+  let icon = document.querySelector("#weather-icon");
+  icon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 function apiValue(city) {
   let apiKey = "3295420a693443714c3efda131101743";
