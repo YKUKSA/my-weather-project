@@ -1,4 +1,10 @@
-a {
+a#city-paris,
+a#city-london,
+a#city-berlin,
+a#city-toronto,
+a#city-kyiv,
+a#celsius-degrees,
+a#fahrenheit-degrees {
   color: black;
   text-decoration: none;
   cursor: default;
