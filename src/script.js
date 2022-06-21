@@ -47,14 +47,14 @@ formNew.addEventListener("click", citySearch);
 
 function temperatureValue(response) {
   let city = document.querySelector("h1");
-  city.innerHTML = response.data.name;
   let temperature = Math.round(response.data.main.temp);
-  celsiusTemperature = response.data.main.temp;
   let tempInput = document.querySelector("#temp");
-  tempInput.innerHTML = temperature;
   let description = document.querySelector("#description");
-  description.innerHTML = response.data.weather[0].description;
   let icon = document.querySelector("#weather-icon");
+  city.innerHTML = response.data.name;
+  celsiusTemperature = response.data.main.temp;
+  tempInput.innerHTML = temperature;
+  description.innerHTML = response.data.weather[0].description;
   icon.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -109,3 +109,40 @@ let celsiusTemp = document.querySelector("#celsius-degrees");
 celsiusTemp.addEventListener("click", convertCelsius);
 
 let celsiusTemperature = null;
+
+function parisSearch(event) {
+  event.preventDefault();
+  apiValue("Paris");
+}
+let paris = document.querySelector("#city-paris");
+paris.addEventListener("click", parisSearch);
+
+function londonSearch(event) {
+  event.preventDefault();
+  apiValue("London");
+}
+let london = document.querySelector("#city-london");
+london.addEventListener("click", londonSearch);
+
+function berlinSearch(event) {
+  event.preventDefault();
+  apiValue("Berlin");
+}
+let berlin = document.querySelector("#city-berlin");
+berlin.addEventListener("click", berlinSearch);
+
+function torontoSearch(event) {
+  event.preventDefault();
+  apiValue("Toronto");
+}
+let toronto = document.querySelector("#city-toronto");
+toronto.addEventListener("click", torontoSearch);
+
+function kyivSearch(event) {
+  event.preventDefault();
+  apiValue("Kyiv");
+}
+let kyiv = document.querySelector("#city-kyiv");
+kyiv.addEventListener("click", kyivSearch);
+
+apiValue("Kyiv");
