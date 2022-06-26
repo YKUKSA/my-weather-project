@@ -84,15 +84,22 @@ footer {
 }
 .forecast-date {
   font-size: 11px;
+  text-align: center;
+}
+.forecast-day {
+  text-align: center;
 }
 .forecast-emoji {
-  font-size: 30px;
+  font-size: 35px;
+  text-align: center;
 }
-.forecast-temperature {
-  font-size: 15px;
+.forecast-temperature-max,
+.forecast-temperature-min {
+  font-size: 14px;
+  text-align: center;
 }
-.forecast-degree {
-  font-size: 11px;
+.forecast-temperature-min {
+  opacity: 0.7;
 }
 .ul-cities {
   display: inline-flex;

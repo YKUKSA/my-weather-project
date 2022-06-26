@@ -28,6 +28,18 @@ h3.innerHTML = `${currentDay}.0${currentMonth}.${currentYear} ${currentHour}:${c
 let h2 = document.querySelector("h2");
 h2.innerHTML = weekDays[currentWeekDay];
 
+function dispayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = `<div class="row">
+    <div class="col-2">
+    <div class="forecast-day">Monday</div>
+        <div class="forecast-date">16.05.22</div>
+        <div class="forecast-emoji">⛅</div>
+        <div class="forecast-temperature-max">10°<span class="forecast-temperature-min"> 8°</span></div>
+    </div>
+  </div>`;
+}
+
 function enterCity(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#search-form");
@@ -59,6 +71,7 @@ function temperatureValue(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  dispayForecast();
 }
 function apiValue(city) {
   let apiKey = "3295420a693443714c3efda131101743";
