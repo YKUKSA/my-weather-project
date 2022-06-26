@@ -30,14 +30,28 @@ h2.innerHTML = weekDays[currentWeekDay];
 
 function dispayForecast() {
   let forecastElement = document.querySelector("#forecast");
-  forecastElement.innerHTML = `<div class="row">
-    <div class="col-2">
-    <div class="forecast-day">Monday</div>
+  let forecastHtml = `<div class="row">`;
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="col-2">
+    <div class="forecast-day">${day}</div>
         <div class="forecast-date">16.05.22</div>
         <div class="forecast-emoji">⛅</div>
         <div class="forecast-temperature-max">10°<span class="forecast-temperature-min"> 8°</span></div>
-    </div>
-  </div>`;
+    </div> `;
+  });
+  forecastHtml = forecastHtml + `</div>`;
+  forecastElement.innerHTML = forecastHtml;
 }
 
 function enterCity(event) {
