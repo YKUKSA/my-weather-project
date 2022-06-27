@@ -71,6 +71,12 @@ function citySearch(event) {
 let formNew = document.querySelector("#submit-button");
 formNew.addEventListener("click", citySearch);
 
+function showForecastTemp(coordinates) {
+  let apiKey = "3295420a693443714c3efda131101743";
+  let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+}
+
 function temperatureValue(response) {
   let city = document.querySelector("h1");
   let temperature = Math.round(response.data.main.temp);
@@ -86,6 +92,7 @@ function temperatureValue(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   dispayForecast();
+  showForecastTemp(response.data.coord);
 }
 function apiValue(city) {
   let apiKey = "3295420a693443714c3efda131101743";
