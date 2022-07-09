@@ -29,26 +29,19 @@ let h2 = document.querySelector("h2");
 h2.innerHTML = weekDays[currentWeekDay];
 
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHtml = `<div class="row">`;
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  days.forEach(function (day) {
+
+  forecast.forEach(function (forecastDay) {
     forecastHtml =
       forecastHtml +
       `<div class="col-2">
-    <div class="forecast-day">${day}</div>
+    <div class="forecast-day">${forecastDay.dt}</div>
         <div class="forecast-date">16.05.22</div>
-        <div class="forecast-emoji">⛅</div>
-        <div class="forecast-temperature-max">10°<span class="forecast-temperature-min"> 8°</span></div>
+        <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="" width="42"
+/>
+        <div class="forecast-temperature-max">${forecastDay.temp.max}°<span class="forecast-temperature-min"> ${forecastDay.temp.min}°</span></div>
     </div> `;
   });
   forecastHtml = forecastHtml + `</div>`;
