@@ -111,3 +111,10 @@ footer {
 .li-cities {
   padding: 7px;
 }
+a#city-paris:hover,
+a#city-london:hover,
+a#city-berlin:hover,
+a#city-toronto:hover,
+a#city-kyiv:hover {
+  color: grey;
+}
