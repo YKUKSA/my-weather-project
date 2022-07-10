@@ -74,6 +74,7 @@ footer {
   font-size: 80px;
   margin-top: -20px;
   text-align: center;
+  margin-left: -15px;
 }
 .weather-degree {
   font-size: 70px;
